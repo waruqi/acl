@@ -29,7 +29,7 @@ if is_plat("windows") then
         add_cxflags("-MTd") 
     end
     add_cxxflags("-EHsc")
-	add_syslinks("ws2_32", "IPHlpApi", "kernel32", "user32", "gdi32")
+    add_syslinks("ws2_32", "IPHlpApi", "kernel32", "user32", "gdi32")
 end
 
 -- for the android platform
@@ -85,7 +85,7 @@ if not is_plat("windows") then
             "-fPIC")
 
     if is_kind("static") then
-    	add_cxflags("-fvisibility-inlines-hidden")
+        add_cxflags("-fvisibility-inlines-hidden")
         if not is_plat("android") then
             add_cflags("-flto")
             add_cxxflags("-flto")
